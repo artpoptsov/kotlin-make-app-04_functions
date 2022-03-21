@@ -24,5 +24,4 @@ fun commission(cardType: String = "Vk Pay", lastAmount: Int = 0, currentAmount: 
         else -> 0
     }
     return commissionPay
-    // тестируем
 }
