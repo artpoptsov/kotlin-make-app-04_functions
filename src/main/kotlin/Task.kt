@@ -7,7 +7,7 @@ fun main() {
 
 fun commission(cardType: String = "Vk Pay", lastAmount: Int = 0, currentAmount: Int): Int {
 
-    val commission = when (cardType) {
+    val commissionPay = when (cardType) {
         "Mastercard", "Maestro" -> {
             when (lastAmount) {
                 in 0..75_000_00 -> 0
@@ -16,12 +16,12 @@ fun commission(cardType: String = "Vk Pay", lastAmount: Int = 0, currentAmount: 
         }
         "Visa", "Мир" -> {
             when {
-                currentAmount * 75 / 10_000 > 35 -> currentAmount * 75 / 10_000
-                else -> 35
+                currentAmount * 75 / 10_000 > 35_00 -> currentAmount * 75 / 10_000
+                else -> 35_00
             }
         }
         "Vk Pay" -> 0
         else -> 0
     }
-    return commission
+    return commissionPay
 }
