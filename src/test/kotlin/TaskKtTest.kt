@@ -92,6 +92,6 @@ class TaskKtTest {
         )
 
         // assert
-        assertEquals(35, result)
+        assertEquals(3500, result)
     }
 }
